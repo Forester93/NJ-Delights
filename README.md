@@ -44,4 +44,9 @@ When you open the page, you will be presented with several timeslots for a typic
 
 ### Fourth Commit
 
-• Fixed a bug with the JS src attribution to images.
+• Fixed a bug with the JS src attribution to images.  
+• Added a screenshot to the readme.
+
+### Fifth Commit
+
+• Added a copyright statement to the page footer.
