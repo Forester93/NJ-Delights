@@ -1,0 +1,181 @@
+/*defining variables*/
+:root {
+  --laptopw: 100%;
+  --laptoph: 600px;
+  --bgcolor: rgb(19, 17, 17);
+  --framecolor: rgb(231, 231, 231);
+  --glow: linear-gradient(rgb(140, 0, 255), rgba(255, 0, 255, 0.3));
+  --themecolor: rgb(38, 241, 38);
+  --repitition: 3;
+  --header1size: 7.5vh;
+  --header2size: 3vh;
+}
+body {
+  background-color: var(--bgcolor);
+  display: block;
+  left: auto;
+  top: auto;
+  align-items: center;
+}
+
+header h1 {
+  margin-top: 10vh;
+  color: var(--themecolor);
+  position: relative;
+  text-align: center;
+  font-size: var(--header1size);
+  font-family: Edwardian Script;
+  font-style: italic;
+}
+#titlespan {
+  transform: scaleY(4);
+}
+header p {
+  color: var(--framecolor);
+  position: relative;
+  text-align: center;
+  margin: 3vh;
+}
+
+.content {
+  display: grid;
+  grid-row-gap: auto;
+  grid-template-columns: repeat(var(--repitition), 1fr);
+  grid-column-gap: 2vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+.cheat {
+  border-style: dotted;
+  border-color: var(--framecolor);
+  color: var(--themecolor);
+  position: relative;
+  width: var(--laptopw);
+  height: fit-content;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5vh;
+  margin-top: 3vh;
+}
+.cheat h2 {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--framecolor);
+  position: absolute;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  left: 5%;
+  top: -25px;
+  width: 90%;
+  height: 50px;
+  background-color: var(--bgcolor);
+  font-size: var(--header2size);
+  align-items: center;
+  text-align: center;
+}
+.cheat:hover,
+.cheat:hover > h2 {
+  animation-duration: 0.75s;
+  animation-name: glow;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+/*the glow effect on the borders*/
+@keyframes glow {
+  0% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgba(255, 0, 255, 0.1);
+  }
+  50% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgba(21, 255, 0, 0.75);
+  }
+  100% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgb(21, 255, 0);
+  }
+}
+
+.code {
+  width: 90%;
+  height: 50vh;
+  border-radius: 1vw;
+  background-image: var(--glow);
+  margin-top: 7.5%;
+  margin-left: 5%;
+  margin-bottom: 2.5%;
+  padding: 1vw;
+  align-items: center;
+  display: block;
+}
+
+/*styling the product image size */
+.product-image {
+  max-height: 100%;
+  max-width: 100%;
+  align-self: center;
+}
+
+/*styling the form for updating the cart*/
+.addremoveproducts {
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr;
+  align-items: center;
+  margin-left: 5%;
+  width: 90%;
+}
+
+/*styling the buttons inside the updating cart form*/
+
+.addToCart,
+.removeFromCart {
+  position: relative;
+}
+
+.addToCart:hover::after {
+  content: "💚";
+  transform: scale(2);
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  animation: fly 0.4s linear forwards;
+}
+.removeFromCart:hover::after {
+  content: "💔";
+  transform: scale(2);
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  animation: fly 0.4s linear forwards;
+}
+
+@keyframes fly {
+  99% {
+    bottom: 20vh;
+    transform: scale(0.1);
+  }
+  100% {
+    display: none;
+  }
+}
+/*styling the label with the price*/
+.price {
+  left: 50%;
+  font-size: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  /*for tablets*/
+  :root {
+    --repitition: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*for phones*/
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
