@@ -10,13 +10,13 @@ let products=[{
     photo: 'product (2).jpg',
     description: 'Just like Mum\'s cooking'
 },
-{
-    name:'Assortment C',
-    price: 29.99,
-    photo: 'product (3).jpg',
-    description: 'Your favourite cheat meal'
+// {
+//     name:'Assortment C',
+//     price: 29.99,
+//     photo: 'product (3).jpg',
+//     description: 'Your favourite cheat meal'
 
-},
+// },
 {
     name:'Confectionary D',
     price:38.99,
